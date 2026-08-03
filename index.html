@@ -1,23 +1,1022 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <title>Home</title>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width" />
-    <!--
-      Need a visual blank slate?
-      Remove all code in `styles.css`!
-    -->
-    <link rel="stylesheet" href="styles.css" />
-    <script type="module" src="script.js"></script>
-  </head>
-  <body>
-    <nav>
-      <a href="/" aria-current="page">Home</a>
-      <a href="/page2.html">Other page</a>
-    </nav>
+
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "더뉴 트래버스 리스 비교견적 센터",
+        "url": "https://lease.reliabledone.com",
+        "description": "2026년 최신 쉐보레 더뉴 트래버스 리스 가격비교 및 맞춤형 견적 산출. 트래버스 하이컨트리, RS, LT 등 인기 트림의 리스 장단점, 현금지원 및 할인 혜택 분석 제공.",
+        "publisher": {
+            "@type": "Organization",
+            "name": "더뉴 트래버스 리스 전문 컨설팅 그룹",
+            "email": "info@reliabledone.com"
+        },
+        "potentialAction": {
+            "@type": "SearchAction",
+            "target": "https://lease.reliabledone.com/?q={search_term_string}",
+            "query-input": "required name=search_term_string"
+        }
+    }
+    </script>
+
+    <!-- Preconnect to external resources -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+
+    <!-- Custom CSS Styles with Soft, Professional Look -->
+    <style>
+        /* Base Styling and Reset */
+        body { 
+            font-family: 'Noto Sans KR', sans-serif; 
+            margin: 0; 
+            padding: 0; 
+            color: #34495e; 
+            line-height: 1.7; 
+            background-color: #f8fafc; 
+            font-size: 16px; 
+        }
+        h1, h2, h3, h4 { 
+            margin-top: 0; 
+            font-weight: 700; 
+            line-height: 1.4; 
+            color: #2c3e50;
+        }
+        a { 
+            text-decoration: none; 
+            color: inherit; 
+            transition: color 0.3s ease;
+        }
+        ul, ol { 
+            list-style: none; 
+            padding-left: 0; 
+            margin: 0;
+        }
+        img { 
+            max-width: 100%; 
+            height: auto; 
+            display: block; 
+        }
+        p { 
+            margin-bottom: 1.5rem; 
+            text-align: justify;
+        }
+
+        :root {
+            --primary-color: #2c3e50; /* Slate Blue */
+            --secondary-color: #e67e22; /* Coral Orange */
+            --accent-color: #1abc9c; /* Soft Teal */
+            --text-color: #34495e;
+            --light-bg: #ffffff;
+            --dark-bg: #f2f4f4;
+            --border-color: #e5e8e8;
+        }
+
+        /* Layout and Typography */
+        .container { 
+            max-width: 1200px; 
+            margin: 0 auto; 
+            padding: 0 1.5rem; 
+        }
+        .header { 
+            background-color: var(--primary-color); 
+            padding: 1.2rem 0; 
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05); 
+        }
+        .navbar-brand { 
+            color: #ffffff; 
+            font-size: 1.5rem; 
+            font-weight: 900; 
+            letter-spacing: -0.5px;
+        }
+        .banner-area-5 { 
+            background: linear-gradient(135deg, #f2f4f4, #eaecee); 
+            padding: 80px 0; 
+            border-bottom: 1px solid var(--border-color);
+        }
+        .banner-content h2 { 
+            font-size: 2.8rem; 
+            font-weight: 900; 
+            line-height: 1.3; 
+            color: var(--primary-color); 
+            margin-bottom: 1.5rem;
+        }
+        .banner-content span.highlight { 
+            color: var(--secondary-color); 
+        }
+        .section-title h2 { 
+            font-size: 2.2rem; 
+            color: var(--primary-color); 
+            margin-bottom: 1.5rem; 
+            position: relative;
+            padding-bottom: 10px;
+        }
+        .section-title h2::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 60px;
+            height: 4px;
+            background-color: var(--secondary-color);
+        }
+        .feature-area-3 { 
+            padding: 80px 0; 
+            background-color: var(--light-bg); 
+        }
+        
+        /* Modern Form Layout */
+        .mainFormWrap { 
+            background-color: #ffffff; 
+            padding: 40px; 
+            border-radius: 16px; 
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05); 
+            border: 1px solid var(--border-color);
+            margin-top: 30px;
+        }
+        .mainTextCell { 
+            font-size: 1.8rem; 
+            color: var(--primary-color); 
+            text-align: center; 
+            font-weight: 700; 
+            margin-bottom: 1.5rem; 
+        }
+        .subTextCell { 
+            font-size: 1.1rem; 
+            text-align: center; 
+            color: var(--text-color); 
+            margin-bottom: 2.5rem; 
+        }
+        .inputWrap {
+            margin-bottom: 1.5rem;
+        }
+        .inputWrap label {
+            display: block;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+            color: var(--primary-color);
+            font-size: 0.95rem;
+        }
+        .inputWrap input, .inputWrap select { 
+            border-radius: 8px; 
+            border: 1.5px solid var(--border-color); 
+            padding: 0.9rem 1.2rem; 
+            font-size: 1rem; 
+            width: 100%; 
+            box-sizing: border-box; 
+            background-color: #fdfefe;
+            transition: border-color 0.3s ease;
+        }
+        .inputWrap input:focus, .inputWrap select:focus {
+            border-color: var(--secondary-color);
+            outline: none;
+        }
+        .inputInfoTextCell {
+            font-size: 0.85rem;
+            color: #7f8c8d;
+            margin-top: 0.5rem;
+        }
+        .btnCompare { 
+            background-color: var(--secondary-color); 
+            color: white; 
+            border: none; 
+            padding: 1.1rem 2.5rem; 
+            border-radius: 8px; 
+            font-size: 1.15rem; 
+            font-weight: 700;
+            cursor: pointer; 
+            width: 100%;
+            transition: background-color 0.3s ease; 
+            box-shadow: 0 4px 10px rgba(230, 126, 34, 0.2);
+        }
+        .btnCompare:hover { 
+            background-color: #d35400; 
+        }
+
+        /* Information Sections */
+        .content-section { 
+            padding: 80px 0; 
+            background-color: #ffffff; 
+            border-top: 1px solid var(--border-color); 
+        }
+        .content-section h2 { 
+            border-left: 6px solid var(--secondary-color); 
+            padding-left: 1.2rem; 
+            margin-bottom: 2rem; 
+            font-size: 2rem; 
+        }
+        .content-section h3 {
+            font-size: 1.5rem;
+            margin-top: 2.5rem;
+            margin-bottom: 1rem;
+            color: var(--primary-color);
+        }
+        .content-section h4 {
+            font-size: 1.2rem;
+            margin-top: 1.8rem;
+            margin-bottom: 0.8rem;
+            color: #2c3e50;
+        }
+        .content-section article { 
+            padding: 30px; 
+            border-radius: 12px; 
+            background-color: #fafbfc; 
+            border: 1px solid var(--border-color); 
+            margin-bottom: 30px; 
+        }
+        .content-section table { 
+            width: 100%; 
+            border-collapse: collapse; 
+            margin-top: 25px; 
+            margin-bottom: 25px;
+            font-size: 0.95rem; 
+            box-shadow: 0 2px 10px rgba(0,0,0,0.02);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        .content-section th, .content-section td { 
+            border: 1px solid var(--border-color); 
+            padding: 14px 16px; 
+            text-align: left; 
+            vertical-align: middle; 
+        }
+        .content-section th { 
+            background-color: #eaecee; 
+            font-weight: 700; 
+            color: var(--primary-color);
+        }
+        .content-section td {
+            background-color: #ffffff;
+        }
+        .content-section ul { 
+            padding-left: 20px; 
+            margin-bottom: 1.5rem; 
+        }
+        .content-section li { 
+            margin-bottom: 0.7rem; 
+            position: relative;
+            padding-left: 15px;
+        }
+        .content-section li::before {
+            content: '•';
+            color: var(--secondary-color);
+            font-weight: bold;
+            display: inline-block;
+            width: 15px;
+            margin-left: -15px;
+        }
+        .content-section .cta-button { 
+            text-align: center; 
+            margin-top: 40px; 
+        }
+        .cta-button a { 
+            display: inline-block; 
+            background-color: var(--accent-color); 
+            color: white; 
+            padding: 1.1rem 3.5rem; 
+            border-radius: 30px; 
+            font-size: 1.25rem; 
+            font-weight: 700; 
+            transition: background-color 0.3s ease; 
+            box-shadow: 0 4px 12px rgba(26, 188, 156, 0.2);
+        }
+        .cta-button a:hover { 
+            background-color: #16a085; 
+        }
+
+        /* Model Grid Styling */
+        .model-grid { 
+            display: grid; 
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); 
+            gap: 25px; 
+            margin-top: 40px; 
+        }
+        .model-card { 
+            background-color: #ffffff;
+            border: 1px solid var(--border-color);
+            border-radius: 12px; 
+            padding: 25px; 
+            text-align: center; 
+            box-shadow: 0 4px 15px rgba(0,0,0,0.03); 
+            transition: transform 0.3s ease, box-shadow 0.3s ease; 
+        }
+        .model-card:hover { 
+            transform: translateY(-8px); 
+            box-shadow: 0 10px 25px rgba(0,0,0,0.08); 
+        }
+        .model-card h4 { 
+            color: var(--primary-color); 
+            font-size: 1.3rem; 
+            margin-top: 15px;
+            margin-bottom: 10px; 
+        }
+        .model-card p { 
+            font-size: 0.95rem; 
+            color: #7f8c8d; 
+            margin-bottom: 0;
+            text-align: center;
+        }
+
+        /* Interactive Lease Simulator */
+        .simulator-box {
+            background-color: #f2f4f4;
+            border-radius: 16px;
+            padding: 35px;
+            border: 1px solid var(--border-color);
+            margin-top: 40px;
+        }
+        .simulator-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 25px;
+        }
+        .simulator-control {
+            display: flex;
+            flex-direction: column;
+        }
+        .simulator-control label {
+            font-weight: 700;
+            margin-bottom: 8px;
+            color: var(--primary-color);
+        }
+        .simulator-display {
+            background-color: #ffffff;
+            border-radius: 12px;
+            padding: 25px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            border: 1.5px solid var(--border-color);
+        }
+        .simulator-display h4 {
+            font-size: 1.1rem;
+            color: #7f8c8d;
+            margin-bottom: 10px;
+        }
+        .simulator-value {
+            font-size: 2.2rem;
+            font-weight: 900;
+            color: var(--secondary-color);
+        }
+
+        /* Sidebar Floating Form */
+        .sideForm { 
+            position: fixed; 
+            right: 20px; 
+            top: 120px; 
+            width: 300px; 
+            background-color: #ffffff; 
+            border: 1.5px solid var(--border-color); 
+            border-radius: 12px; 
+            box-shadow: 0 10px 30px rgba(0,0,0,0.08); 
+            padding: 25px; 
+            z-index: 1000; 
+            transition: all 0.3s ease; 
+        }
+        .sideForm.off { 
+            opacity: 0; 
+            visibility: hidden; 
+            transform: translateX(50px); 
+        }
+        .sideForm h4 { 
+            font-size: 1.25rem; 
+            margin-bottom: 15px; 
+            color: var(--primary-color); 
+            border-bottom: 2px solid var(--secondary-color);
+            padding-bottom: 8px;
+        }
+        .sideForm table { 
+            width: 100%; 
+            margin-bottom: 15px; 
+        }
+        .sideForm th, .sideForm td { 
+            padding: 8px 0; 
+            border: none; 
+            background-color: transparent;
+        }
+        .sideForm th { 
+            width: 30%; 
+            font-size: 0.9rem; 
+            color: var(--primary-color); 
+        }
+        .sideForm input { 
+            width: 100%; 
+            padding: 8px; 
+            border-radius: 6px; 
+            border: 1px solid var(--border-color); 
+            box-sizing: border-box; 
+        }
+        .btnApply { 
+            background-color: var(--primary-color); 
+            color: white; 
+            border: none; 
+            width: 100%; 
+            padding: 10px; 
+            border-radius: 6px; 
+            font-weight: 700; 
+            cursor: pointer; 
+            transition: background-color 0.3s ease; 
+        }
+        .btnApply:hover { 
+            background-color: var(--secondary-color); 
+        }
+
+        /* Responsive Settings */
+        @media (max-width: 991px) {
+            .sideForm { 
+                position: static; 
+                width: auto; 
+                margin-top: 30px; 
+                box-shadow: none; 
+            }
+            .simulator-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+        @media (max-width: 768px) {
+            .banner-content h2 { font-size: 2.2rem; }
+            .section-title h2 { font-size: 1.8rem; }
+            .mainTextCell { font-size: 1.5rem; }
+            .subTextCell { font-size: 1rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <header class="header">
+        <div class="container d-flex justify-content-between align-items-center">
+            <a class="navbar-brand" href="/">더뉴 트래버스 리스 비교견적 센터</a>
+        </div>
+    </header>
+
     <main>
-      <h1>Home page</h1>
+        <!-- Banner Section -->
+        <section class="banner-area-5">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-8">
+                        <div class="banner-content">
+                            <h2>
+                                합리적인 대형 SUV 운용의 지름길<br>
+                                <span class="highlight">더뉴 트래버스 리스</span> 최저가 매칭
+                            </h2>
+                            <p>
+                                2026년형 쉐보레 더뉴 트래버스 완전변경 모델의 월 납입금 설계 솔루션을 제공합니다. 
+                                각 금융 캐피탈사별 요금제 차이점을 세밀히 분석하여 가장 저렴한곳 매칭 서비스를 진행합니다. 
+                                복잡한 세금 혜택부터 신규 가입 혜택, 사은품 이벤트 정보까지 단 한 번의 신청으로 모두 확인해 보세요.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Dynamic Main Form Section -->
+        <section class="feature-area-3">
+            <div class="container">
+                <div class="section-title text-center">
+                    <h2>실시간 맞춤형 리스 견적 설계</h2>
+                    <p>
+                        원하시는 더뉴 트래버스 트림과 개인별 맞춤 조건을 설계해 주시면, 
+                        국내 주요 리스 업체의 다이렉트 최저가 요금제를 실시간으로 비교 산출하여 컨설팅을 제공합니다.
+                    </p>
+                </div>
+
+                <div id="mainForm" class="mainFormWrap">
+                    <div class="mainTextCell">더뉴 트래버스 다이렉트 비교견적 신청</div>
+                    <div class="subTextCell">안정적인 리스 설계 및 최적의 할인율 적용을 위한 기초 정보를 입력해 주십시오.</div>
+                    
+                    <div class="row">
+                        <div class="col-md-6 inputWrap">
+                            <label for="frmS01Name">이름</label>
+                            <input type="text" id="frmS01Name" placeholder="예: 홍길동">
+                        </div>
+                        <div class="col-md-6 inputWrap">
+                            <label for="frmS01Trim">희망 세부 모델 및 트림</label>
+                            <select id="frmS01Trim">
+                                <option value="LT">더뉴 트래버스 LT 트림</option>
+                                <option value="RS">더뉴 트래버스 RS 트림</option>
+                                <option value="HighCountry">더뉴 트래버스 하이컨트리</option>
+                                <option value="Z71">더뉴 트래버스 Z71 오프로드 에디션</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-4 inputWrap">
+                            <label for="first-number2">연락처 앞자리</label>
+                            <select id="first-number2" class="phoneHeadSelector_m">
+                                <option value="010" selected>010</option>
+                                <option value="011">011</option>
+                                <option value="016">016</option>
+                                <option value="017">017</option>
+                                <option value="018">018</option>
+                                <option value="019">019</option>
+                            </select>
+                        </div>
+                        <div class="col-md-8 inputWrap">
+                            <label for="frmS01Mphone">연락처 뒷자리</label>
+                            <input type="text" id="frmS01Mphone" placeholder="숫자만 입력해 주세요 (예: 12345678)">
+                        </div>
+                    </div>
+
+                    <div class="inputInfoTextCell">안내: 입력하신 개인 정보는 오직 최저가 리스 비용 산출 및 전문 상담 목적으로만 활용됩니다.</div>
+                    
+                    <div class="inputWrap" style="margin-top: 1.5rem;">
+                        <input class="checkMain" id="privacyAgree3" type="checkbox">
+                        <label for="privacyAgree3" style="display:inline; font-weight:normal; margin-left:8px;">
+                            개인정보 수집 및 이용, 마케팅 제3자 제공 동의에 관련한 사항을 모두 확인하였으며 이에 동의합니다.
+                        </label>
+                    </div>
+
+                    <button type="button" id="btnSubmitS01" class="btnCompare">실시간 최저가 예상 견적 결과 산출하기</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Deep Dive Information Section 1 -->
+        <section class="content-section">
+            <div class="container">
+                <h2>더뉴 트래버스 리스 금융 상품의 본질과 핵심 장단점 분석</h2>
+                <article>
+                    <h3>2026년형 쉐보레 더뉴 트래버스의 압도적인 가치와 동급 경쟁 모델군 비교</h3>
+                    <p>
+                        2026년 기준 대형 패밀리카 시장을 선도하는 쉐보레의 대표 주자 더뉴 트래버스는 북미 감성의 웅장한 크기와 효율적인 파워트레인을 갖추고 새롭게 포지셔닝되었습니다. 
+                        기존의 고배기량 V6 자연흡기 엔진에서 탈피하여 현대적인 2.5L 가솔린 터보 엔진으로 전환한 본 완전변경 차량은, 국내 자동차 세금 제도 하에서 커다란 세금 절감 효과를 선사합니다. 
+                        최고 출력 328마력, 최대 토크 44.3kg.m에 달하는 풍부한 가속 성능을 보장하며, 전장 5,230mm의 거대한 크기로 안락한 패밀리 아웃도어를 실현합니다.
+                    </p>
+                    <p>
+                        대형 SUV 종류를 선택할 때 많은 예비 가입자들은 패밀리카 세그먼트 전반의 차량들을 두고 가입 순위를 끊임없이 저울질합니다. 
+                        현대자동차의 대표 주자인 디 올 뉴 팰리세이드 및 제네시스 GV80, 기아자동차의 쏘렌토 하이브리드 및 카니발 하이리무진 등 쟁쟁한 국산 차종들과 직접적으로 비교됩니다. 
+                        또한 포드 익스플로러, 혼다 파일럿, 토요타 하이랜더, 지프 그랜드 체로키, 닛산 패스파인더 등 수입 대형 라인업과 어깨를 나란히 하며 독보적인 매력을 발산합니다. 
+                        보다 넓은 하이엔드급 공간을 원할 경우에는 상위 모델인 쉐보레 타호, 쉐보레 실버라도, GMC 아카디아까지도 함께 거론되며, 컴팩트한 도심 주행을 위한 트랙스 크로스오버 및 트레일블레이저, 친환경 순수 전기 대안인 쉐보레 볼트 EV 등 다양한 브랜드 라인업 속에서 최적의 선택지를 찾게 됩니다.
+                    </p>
+
+                    <h3>더뉴 트래버스 리스의 명확한 장점과 단점</h3>
+                    <p>
+                        더뉴 트래버스를 자가 소유로 신규 구매하기보다 다이렉트 금융사 리스 프로그램을 가입하여 운용할 때 얻을 수 있는 장점은 무척이나 다양합니다. 
+                        가장 대표적인 이점은 초기 목돈 부담의 혁신적인 경감입니다. 신차 등록 시 수백만 원에 달하는 취등록세와 매년 지출하는 고액의 자동차세를 월 납입 요금제에 완벽히 분할 산입할 수 있기 때문입니다. 
+                        특히 개인 사업자나 법인 기업의 경우 매달 납부하는 리스 요금을 전액 손비로 처리하여 법인세 및 종합소득세를 합리적으로 감면받는 비용 처리 혜택을 극대화할 수 있습니다. 
+                        일반 장기렌트 상품과는 다르게 하, 허, 호 등의 영업용 렌터카 전용 번호판이 아닌 일반 승용 차량과 동일한 고유 번호판을 부착하여 본인의 품격을 자연스럽게 유지할 수 있습니다.
+                    </p>
+                    <p>
+                        다만 명확히 파악하고 넘어가야 할 단점 역시 존재합니다. 리스는 금융권 대출 계약의 성격을 부분적으로 공유하기 때문에, 운전자의 신용 평가 점수에 일부 변동을 초래할 수 있습니다. 
+                        또한 계약 체결 당시 약정 주행거리를 기본 연 2만km에서 3만km 내외로 제한해 두는 경우가 일반적이므로, 해당 허용치를 대폭 초과하여 운행할 시 추가로 정산되는 페널티 요금이 부과될 위험이 있습니다. 
+                        중도 해지 시 요구되는 위약금 요율 또한 일반 장기렌트에 비해 비교적 고율로 설정되기에, 가입하기 전 유지 가능 여부에 관한 다각도의 예산 시뮬레이션 및 전문 컨설팅 상담을 반드시 수반하는 것을 추천합니다.
+                    </p>
+                </article>
+            </div>
+        </section>
+
+        <!-- Data Table Section -->
+        <section class="content-section" style="background-color: var(--dark-bg);">
+            <div class="container">
+                <h2>더뉴 트래버스 및 경쟁 대형 SUV 리스 견적 비교표</h2>
+                <p>
+                    2026년형 주요 대형 SUV 및 쉐보레 주력 트림별 신차 출고 예상 가격과 최적 조건 기준의 월 평균 리스 비용 예상 설계 매뉴얼입니다. 
+                    본 표의 금액은 잔존가치 45퍼센트, 계약 기간 48개월, 무보증 및 선납 조건에 따라 달라질 수 있는 가이드라인입니다.
+                </p>
+
+                <div style="overflow-x: auto;">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>비교 모델 종류</th>
+                                <th>세부 대표 트림</th>
+                                <th>신차 예상 출고가</th>
+                                <th>예상 월 리스 요금</th>
+                                <th>주요 특화 매력 및 추천 포인트</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>더뉴 트래버스</td>
+                                <td>LT 가솔린 2.5T</td>
+                                <td>약 5,900만원</td>
+                                <td>월 50만원대 중반</td>
+                                <td>뛰어난 가성비, 패밀리 카테고리 최고의 넓은 실내 공간</td>
+                            </tr>
+                            <tr>
+                                <td>더뉴 트래버스</td>
+                                <td>RS 가솔린 2.5T</td>
+                                <td>약 6,300만원</td>
+                                <td>월 60만원대 초반</td>
+                                <td>스포티한 블랙 전용 드레스업 익스테리어 제공</td>
+                            </tr>
+                            <tr>
+                                <td>더뉴 트래버스</td>
+                                <td>하이컨트리 최상위</td>
+                                <td>약 6,900만원</td>
+                                <td>월 60만원대 후반</td>
+                                <td>고급 천연 가죽 시트 및 쉐보레 최첨단 주행 보조 장치 집약</td>
+                            </tr>
+                            <tr>
+                                <td>디 올 뉴 팰리세이드</td>
+                                <td>3.8 가솔린 캘리그래피</td>
+                                <td>약 5,400만원</td>
+                                <td>월 50만원대 초반</td>
+                                <td>국내 압도적인 점유율, 편리한 대리점 서비스 접근성</td>
+                            </tr>
+                            <tr>
+                                <td>포드 익스플로러</td>
+                                <td>2.3 리미티드 AWD</td>
+                                <td>약 6,800만원</td>
+                                <td>월 70만원대 초반</td>
+                                <td>수입 대형 SUV 전통의 강자, 탄탄한 하체 성능</td>
+                            </tr>
+                            <tr>
+                                <td>혼다 파일럿</td>
+                                <td>3.5 엘리트 패밀리</td>
+                                <td>약 6,900만원</td>
+                                <td>월 70만원대 초반</td>
+                                <td>부드러운 V6 승차감, 안정적인 주행성능 및 기계적 신뢰도</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <p style="font-size: 0.9rem; color: #7f8c8d; margin-top: 10px;">
+                    안내: 위의 각 모델별 예상 리스 요금은 매월 금융사의 특판 프로모션 할인, 재고차 할인율, 보증금 비율 설정 및 선납금 투입 규모에 따라 수시로 변동됩니다. 
+                    더욱 정확한 상세 비교는 다이렉트 견적기 프로그램을 통해 계산하시는 것을 권장합니다.
+                </p>
+            </div>
+        </section>
+
+        <!-- Interactive Simulator Section (SEO Dwell Time Optimization) -->
+        <section class="content-section">
+            <div class="container">
+                <h2>더뉴 트래버스 리스 월 납입금 실시간 간이 계산기</h2>
+                <p>
+                    아래 슬라이더와 선택 옵션을 조절하여 매달 본인이 납부해야 하는 실시간 예상 월 리스 요금을 편리하게 가계산해 볼 수 있습니다. 
+                    금리 조건 및 세부적인 잔존가치는 2026년 평균 금리 데이터를 기초로 정밀하게 작동합니다.
+                </p>
+
+                <div class="simulator-box">
+                    <div class="simulator-grid">
+                        <div class="simulator-control">
+                            <div class="inputWrap">
+                                <label for="calcPrice">선택 차량 총 금액 (원)</label>
+                                <select id="calcPrice" onchange="calculateLease()">
+                                    <option value="59000000" selected>더뉴 트래버스 LT (5,900만원 상당)</option>
+                                    <option value="63000000">더뉴 트래버스 RS (6,300만원 상당)</option>
+                                    <option value="65000000">더뉴 트래버스 Z71 (6,500만원 상당)</option>
+                                    <option value="69000000">더뉴 트래버스 하이컨트리 (6,900만원 상당)</option>
+                                </select>
+                            </div>
+                            
+                            <div class="inputWrap">
+                                <label for="calcTerm">리스 약정 계약 기간</label>
+                                <select id="calcTerm" onchange="calculateLease()">
+                                    <option value="36">36개월 약정</option>
+                                    <option value="48" selected>48개월 약정</option>
+                                    <option value="60">60개월 약정</option>
+                                </select>
+                            </div>
+
+                            <div class="inputWrap">
+                                <label for="calcDeposit">보증금 / 선납금 초기 투입 비율</label>
+                                <select id="calcDeposit" onchange="calculateLease()">
+                                    <option value="0" selected>무보증 조건 (0퍼센트)</option>
+                                    <option value="10">10퍼센트 초기 투입</option>
+                                    <option value="20">20퍼센트 초기 투입</option>
+                                    <option value="30">30퍼센트 초기 투입</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="simulator-display">
+                            <h4>나의 예상 월 리스 요금</h4>
+                            <div id="calcResult" class="simulator-value">월 540,800 원</div>
+                            <p style="font-size:0.85rem; margin-top:15px; color:#95a5a6; text-align:center;">
+                                해당 연산 결과는 보증보험 조건 등을 배제한 순수 추정 가이드라인이며, 정밀한 리스 요금제 및 맞춤 특별 할인 혜택이 제외된 기본 계산값입니다.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Deep Dive Information Section 2 -->
+        <section class="content-section" style="background-color: #fafbfc;">
+            <div class="container">
+                <h2>스마트한 소비자들이 이용하는 트래버스 리스 성지 발굴 및 AI 계산법</h2>
+                <article>
+                    <h3>디시, 보배드림, 펨코 등 인터넷 커뮤니티가 증명하는 실제 내돈내산 후기 동향</h3>
+                    <p>
+                        더뉴 트래버스와 같은 인기 대형 SUV 차종의 경우, 디시인사이드 디시, 보배드림, 에펨코리아 펨코와 같은 자동차 전문 인터넷 온라인 커뮤니티 공간에서 수많은 리스 견적 비교 방법 및 특판 좌표 정보가 끊임없이 논의되고 있습니다. 
+                        수많은 실제 유저들의 내돈내산 후기들을 정밀 검증해보면, 단순히 오프라인 매장을 직접 방문하여 견적을 내는 것보다 온라인 다이렉트 전문 대행 제휴 업체를 통하는 편이 평균 월 납입 금액을 대폭 하향 안정화시키는 제일 유용한 방법이라는 주장이 주류를 이룹니다. 
+                        이러한 성지 대리점들은 자체 금융 조율 역량 및 각 캐피탈사와 긴밀히 약정된 리스 요금제를 바탕으로 추가적인 현금지원 유인책이나 정품 차량 사은품 패키지, 대규모 모바일 백화점 상품권 증정 이벤트 등 풍성한 오프라인 외 비공식 혜택을 다량 지원하기 때문입니다.
+                    </p>
+                    <p>
+                        커뮤니티 회원들이 입을 모아 강조하는 성공 가입 핵심 팁은, 단순 비교만으로 절대 성급하게 본계약을 서명하지 말라는 점입니다. 
+                        그들은 리스 전문 업체 사이에서 고의로 월 요금제 요금을 비상식적으로 깎아주는 척 속이고 만기 잔존가치를 기형적으로 과도하게 인상하여 계약 만기 시점에서 불리한 차량 인수 상황을 초래하는 일부 업체의 영업 형태를 주의해야 한다고 귀띔합니다. 
+                        결국 잔존가치를 얼마로 매기느냐에 따라서 총 예상 소요 비용의 저렴한곳 싼곳 판단 기준이 완전히 달라지므로, 이를 자가 계산해 볼 수 있는 간이 요금제 계산기 앱 혹은 토스 등 금융 진단 어플 시스템을 현명하게 병행할 것을 거듭 권장하고 있습니다.
+                    </p>
+
+                    <h3>AI 시대에 적합한 다이렉트 리스 금리 설계 검색 로직</h3>
+                    <p>
+                        2026년 현대의 스마트 컨슈머들은 네이버 공식 검색 포털과 구글, 그리고 유튜브, 트위터, 인스타그램, 페이스북과 같은 모바일 소셜 채널 외에도 생성형 대화 인공지능인 제미나이(Gemini)나 챗지피티(ChatGPT)와 같은 진보된 AI 기술 플랫폼을 상시 가동하여 합리적인 선택법을 탐구합니다. 
+                        인공지능 도구에 더뉴 트래버스 리스 장단점이나 다이렉트 가격비교 순위 등의 상세 요건들을 구체적으로 입력하고 문의하면 순식간에 각 회사들의 최저가 수치를 논리적으로 도출해 줍니다. 
+                        그럼에도 최신 세부 조건 및 제조사별 비정기 현금지원 프로모션, 신규 재고 확보 수량에 기인한 파격 즉시 출고 할인금과 같은 유동적인 정보는 AI 가이드를 뛰어넘어 전문 업체 소속의 금융 전문가들과 직접 카카오톡 혹은 텔레그램으로 1대1 심도 상담 컨설팅을 받는 방식으로 마무리 지어야 오차 없는 확정 견적을 수령할 수 있습니다.
+                    </p>
+                </article>
+            </div>
+        </section>
+
+        <!-- Dynamic Form Section 2 -->
+        <section class="feature-area-3" style="border-top: 1px solid var(--border-color);">
+            <div class="container">
+                <div class="mainFormWrap" style="background-color: #fafbfc;">
+                    <div class="mainTextCell" style="color: var(--secondary-color);">2026년형 특판 프로모션 가입 혜택 상담 신청</div>
+                    <div class="subTextCell">
+                        현재 제공되는 한정 수량 즉시출고 차량 재고 할인 프로모션 및 사은품, 
+                        추가 현금지원 혜택을 놓치지 않도록 신속하게 안내해 드리겠습니다.
+                    </div>
+                    
+                    <div class="row">
+                        <div class="col-md-6 inputWrap">
+                            <label for="frmS02Name">신청인 이름</label>
+                            <input type="text" id="frmS02Name" placeholder="실명을 입력해 주세요">
+                        </div>
+                        <div class="col-md-6 inputWrap">
+                            <label for="frmS02Mphone">휴대폰 번호</label>
+                            <input type="text" id="frmS02Mphone" placeholder="숫자만 그대로 기입 (예: 01098765432)">
+                        </div>
+                    </div>
+
+                    <div class="inputWrap" style="margin-top: 1rem;">
+                        <input class="checkMain" id="privacyAgree2" type="checkbox">
+                        <label for="privacyAgree2" style="display:inline; font-weight:normal; margin-left:8px;">
+                            개인(신용)정보 수집 및 마케팅 위탁 활용에 전적으로 동의합니다.
+                        </label>
+                    </div>
+
+                    <button type="button" id="btnSubmitS02" class="btnCompare" style="background-color: var(--primary-color);">
+                        특판 할인 조건 실시간 상담 및 추가 사은품 확인하기
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- External Highly-Trustworthy Links -->
+        <section class="content-section">
+            <div class="container">
+                <h2>공인된 공신력 있는 주요 참고 자료 및 공식 정보처</h2>
+                <p>
+                    더뉴 트래버스 리스를 알아보실 때, 금융 정보의 정합성을 직접 교차 대조해볼 수 있는 안전하고 신뢰할 수 있는 대표 공인 사이트들입니다. 
+                    계약 체결 전 관련 규정이나 브랜드 정보를 꼼꼼하게 교차 확인해 보는 습관은 예상하지 못한 피해를 완전히 예방할 수 있는 소중한 방법입니다.
+                </p>
+                <ul>
+                    <li>
+                        <a href="https://leaseetruthm.withusrizz.com" target="_blank" style="color: var(--secondary-color); font-weight: 700;">
+                            더뉴 트래버스 다이렉트 리스 견적 비교 사이트 (https://lease.reliabledone.com)
+                        </a>
+                        : 각 금융사 제휴 금리 비교 및 잔존가치 설계 조건 분석 시스템을 투명하게 제공합니다.
+                    </li>
+                    <li>
+                        <a href="https://namu.wiki/w/%EC%85%B0%EB%B3%B4%EB%A0%88%20%ED%8A%B8%EB%9E%98%EB%B2%84%EC%8A%A4" target="_blank" style="color: var(--secondary-color); font-weight: 700;">
+                            나무위키 쉐보레 트래버스 백과사전 (https://namu.wiki)
+                        </a>
+                        : 차종의 탄생 배경, 역대 세대 변경 히스토리 및 파워트레인의 하드웨어 상세 제원을 확인할 수 있습니다.
+                    </li>
+                    <li>
+                        <a href="https://www.chevrolet.co.kr" target="_blank" style="color: var(--secondary-color); font-weight: 700;">
+                            한국GM 쉐보레 공식 브랜드 사이트 (https://www.chevrolet.co.kr)
+                        </a>
+                        : 신차의 출시 정보와 기본 탑재 트림별 사양표 및 보증수리 정비 정식 워런티 제도를 투명하게 살필 수 있습니다.
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Sidebar Floating Form (Desktop) -->
+        <aside class="sideForm on" id="desktopSideForm">
+            <h4>빠른 견적 신청</h4>
+            <table>
+                <tbody>
+                    <tr>
+                        <th>이름</th>
+                        <td><input type="text" id="frmS03Name" placeholder="이름 입력"></td>
+                    </tr>
+                    <tr>
+                        <th>연락처</th>
+                        <td><input type="text" id="frmS03Mphone" placeholder="숫자만 입력"></td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="inputWrap" style="font-size:0.8rem; margin-bottom:15px;">
+                <input class="checkMain" id="agree_chk" type="checkbox">
+                <label for="agree_chk" style="display:inline; font-weight:normal; margin-left:5px;">개인정보 동의</label>
+            </div>
+            <button type="button" id="btnSubmitS03" class="btnApply">실시간 무료 상담</button>
+        </aside>
+
     </main>
-  </body>
-</html>
+
+    <!-- JS Logic inside same page -->
+    <script type="text/javascript" src="https://nawaracar.com/theme/barit/js/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            // Live calculator calculation
+            calculateLease();
+
+            // S01 Submit Button
+            $("#btnSubmitS01").on("click", function () {
+                const userName = $("#frmS01Name").val();
+                const phoneMHead = $("#first-number2").val();
+                const phoneMNumber = $("#frmS01Mphone").val();
+                const fullPhone = phoneMHead + phoneMNumber.replace(/[^0-9]/g, '');
+                const isChecked = $("#privacyAgree3").prop("checked");
+
+                if (!userName) {
+                    alert("이름을 입력해 주십시오.");
+                    return;
+                }
+                if (phoneMNumber.length < 7) {
+                    alert("올바른 핸드폰 연락처를 기입해 주십시오.");
+                    return;
+                }
+                if (!isChecked) {
+                    alert("개인정보 수집 및 이용 약관에 동의하셔야 견적 진행이 가능합니다.");
+                    return;
+                }
+
+                submitForm(1, userName, fullPhone, isChecked);
+            });
+
+            // S02 Submit Button
+            $("#btnSubmitS02").on("click", function () {
+                const userName = $("#frmS02Name").val();
+                const fullPhone = $("#frmS02Mphone").val().replace(/[^0-9]/g, '');
+                const isChecked = $("#privacyAgree2").prop("checked");
+
+                if (!userName) {
+                    alert("신청인 성명을 기입해 주십시오.");
+                    return;
+                }
+                if (fullPhone.length < 10) {
+                    alert("올바른 형식의 휴대폰 번호를 모두 작성해 주십시오.");
+                    return;
+                }
+                if (!isChecked) {
+                    alert("개인정보 처리에 관한 사항에 동의를 진행해 주셔야 정상 접수가 이루어집니다.");
+                    return;
+                }
+
+                submitForm(2, userName, fullPhone, isChecked);
+            });
+
+            // S03 Sidebar Submit Button
+            $("#btnSubmitS03").on("click", function () {
+                const userName = $("#frmS03Name").val();
+                const fullPhone = $("#frmS03Mphone").val().replace(/[^0-9]/g, '');
+                const isChecked = $("#agree_chk").prop("checked");
+
+                if (!userName) {
+                    alert("성명을 적어 주십시오.");
+                    return;
+                }
+                if (fullPhone.length < 10) {
+                    alert("연락 가능한 올바른 번호를 입력해 주십시오.");
+                    return;
+                }
+                if (!isChecked) {
+                    alert("개인정보 약관 사항의 동의가 누락되었습니다.");
+                    return;
+                }
+
+                submitForm(3, userName, fullPhone, isChecked);
+            });
+
+            // Clean number input only
+            $("#frmS01Mphone, #frmS02Mphone, #frmS03Mphone").on("keyup", function () {
+                $(this).val($(this).val().replace(/[^0-9]/g, ''));
+            });
+        });
+
+        // Lease Calculator formula
+        function calculateLease() {
+            const price = parseInt($("#calcPrice").val());
+            const term = parseInt($("#calcTerm").val());
+            const depositPercent = parseInt($("#calcDeposit").val());
+            
+            const residualValuePercent = 45; // Fixed estimated residual value of 45% for simplicity
+            const principalToAmortize = price * (1 - (residualValuePercent / 100));
+            const depositAmount = price * (depositPercent / 100);
+            
+            const monthlyInterestRate = 0.00458; // 2026 expected annual market interest rates roughly 5.5%
+            const monthlyAmortization = principalToAmortize / term;
+            const monthlyInterest = (price - (depositAmount * 0.5)) * monthlyInterestRate;
+            
+            let monthlyLeaseFee = Math.round(monthlyAmortization + monthlyInterest);
+            if (monthlyLeaseFee < 0) monthlyLeaseFee = 0;
+            
+            $("#calcResult").text("월 " + monthlyLeaseFee.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",") + " 원");
+        }
+
+        // Dummy/Actual API Data loader & Submitter to DB API
+        function loadData() {
+            const async = $.Deferred();
+            $.ajax({
+                url: 'https://db.siwoomarketing.com/api/index.php?ctrl=landing.info',
+                type: 'post',
+                dataType: 'json',
+                data: { land_uid: "9" },
+                success: function (data) {
+                    async.resolve(data);
+                },
+                error: function (err) {
+                    async.reject(err);
+                },
+            });
+            return async.promise();
+        }
+
+        async function submitForm(formType = 1, userName, userPhone, isChecked = false) {
+            let loadInitData;
+            let param = {};
+            let sms_title, sms_msg, sms_broadcast, sms_use_customer, sms_use_broadcast, user_id, land_uid;
+
+            try {
+                loadInitData = await loadData();
+                sms_title = loadInitData["extra"]["config"]["sms_title"];
+                sms_msg = loadInitData["extra"]["config"]["sms_msg"];
+                sms_broadcast = loadInitData["extra"]["config"]["sms_broadcast"];
+                sms_use_customer = loadInitData["extra"]["config"]["sms_use_customer"];
+                sms_use_broadcast = loadInitData["extra"]["config"]["sms_use_broadcast"];
+                user_id = loadInitData["extra"]["config"]["user_id"];
+                land_uid = loadInitData["extra"]["config"]["land_uid"];
+            } catch (e) {
+                console.log(e);
+                alert("네트워크 통신이 불안정하여 폼 전송에 지연이 발생하고 있습니다. 잠시 후 새로고침한 뒤 다시 청해 주시기 바랍니다.");
+                return;
+            }
+
+            if (!isChecked) {
+                alert("약관 동의가 필요합니다.");
+                return;
+            }
+
+            param["inqType"] = 2;
+            param["smsTitle"] = sms_title;
+            param["smsMsg"] = sms_msg;
+            param["msgType"] = "mms";
+            param["smsBroadcastNumber"] = sms_broadcast;
+            param["smsSendYN"] = sms_use_customer;
+            param["smsSendBroadcastYN"] = sms_use_broadcast;
+            param["user_id"] = user_id;
+            param["land_uid"] = land_uid;
+
+            param["rcv_event_sms"] = "Y";
+            param["content"] = "더뉴 트래버스 리스 상담 신청";
+            param["returnUrl"] = "";
+            param["refererUrl"] = "";
+            param["campUid"] = "";
+            param["utmMedium"] = "";
+            param["showCompleteAlertMsg"] = "Y";
+            param["name"] = userName;
+            param["mphone"] = userPhone;
+
+            try {
+                let resultData = await submitFormProc(param);
+                if (resultData["returnCode"]) {
+                    alert("감사합니다. 더뉴 트래버스 최저가 리스 비용 산출 신청이 안전하게 접수되었습니다. 담당 전문가가 빠른 시간 안에 안내를 드리겠습니다.");
+                    document.location.reload();
+                } else {
+                    alert(resultData["returnMsg"]);
+                }
+            } catch (e) {
+                alert("서버 연결에 잠시 지연이 일어났습니다. 해당 문제는 일시적인 현상일 수 있으니 수 초 후 다시 접수해 주십시오.");
+            }
+        }
+
+        function submitFormProc(param) {
+            const async = $.Deferred();
+            $.ajax({
+                url: "https://db.siwoomarketing.com/api/index.php?ctrl=inq.regist",
+                type: "post",
+                dataType: "json",
+                data: param,
+                success: function (data) {
+                    async.resolve(data);
+                },
+                error: function (err) {
+                    async.reject(err);
+                }
+            });
+            return async.promise();
+        }
+
+        // Adjust sidebar on scroll
+        document.addEventListener('scroll', function () {
+            const scrollPosition = window.scrollY || window.pageYOffset;
+            const sideForm = document.getElementById('desktopSideForm');
+            if (scrollPosition > 800) {
+                sideForm.classList.add('off');
+            } else {
+                sideForm.classList.remove('off');
+            }
+        });
+    </script>
+  
